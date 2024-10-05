@@ -1,2 +1,2 @@
 run: main.c 
-	gcc -o run main.c  -I.
+	gcc -o run main.c -lm  -I.
