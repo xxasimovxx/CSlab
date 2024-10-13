@@ -11,16 +11,9 @@ void printArrays(double * Z[], int size);
 
 int main (){
   int size, isSorted, solving;
-  char input[64];
-  char * endptr;
-  char * piece;
 
   printf("Give size of array [0-32]: ");
-  fgets(input, sizeof(input), stdin);                             
-
-  input[strcspn(input, "\n")] = '\0';                             
-  piece = strtok(input, " ");           
-  size = atoi(piece);
+  scanf("%d", &size);
 
   double A[size];
   double B[size];
@@ -123,23 +116,11 @@ double L2(double arr[], int N){
 }
 
 void getArrays(double *Z[], int size){
-  char * piece;
-  char * endptr;
-  char input[64];
   for(int i = 0; i < 3; i++){
     
     printf("Input %d values: ", size);
-    fgets(input, sizeof(input), stdin);                             
+    scanf("%lf %lf %lf", &Z[i][0], &Z[i][1], &Z[i][2]);
 
-    input[strcspn(input, "\n")] = '\0';                             
-    piece = strtok(input, " ");           
-    Z[i][0] = strtod(piece, &endptr);
-
-    for(int i2 = 1; i2 < size; i2++){
-    piece = strtok(NULL, " ");           
-    Z[i][i2] = strtod(piece, &endptr);
-
-    }
   }
 }
 

@@ -181,3 +181,7 @@ int match_pattern(const char *src, const char* pattern){
     return !strcmp(p, pattern);;
 } 
 
+void pattern_replace(char src[]){
+  for
+
+}
